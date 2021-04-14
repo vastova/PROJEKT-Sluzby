@@ -1,0 +1,250 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* max-width: 500px; */
+    font-size: 16px;
+    background-color: #FAFAFA;
+    
+        }
+.wrapper {
+    max-width: 500px;
+    display:block;
+    margin:0 auto;
+}
+
+/* obrázek, nadpis a první odstavec */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading{
+    position:relative;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .heading::after{
+    content:'';
+    height:2px;
+    width:60px;
+    background:#407BFF;
+    position:absolute;
+    margin:auto;
+    bottom:-15px;
+    left:0; 
+    right:0;
+  }
+
+.text {
+    color: #8B8B8B;
+    text-align: center;
+}
+/* obrázek, nadpis a první odstavec - konec */
+
+/* Tlačítka */
+.buttons a{
+    text-decoration: none;
+    color: white;
+    margin: 50px;
+}
+ .buttons {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        text-align: center;
+     }
+
+     .dobrodruzstvi, .pohoda {
+        color: white;  
+        padding: 10px 30px;
+        text-align: center;
+        border-radius: 20px;
+        }
+li {
+    margin: 30px 0 10px 0;
+}
+.dobrodruzstvi {
+    background-color: #407BFF;   
+}
+.pohoda {
+    background-color: #8B8B8B;
+}
+
+/* Sekce offer ck & delegates */
+h2 {
+    margin: 60px 0 15px 0; 
+    text-align: center;
+}
+
+.offerimg {
+    width: 45px;
+    height: 40px;
+}
+.offertext {
+    color: #8B8B8B;
+    font-size: 13px;
+    padding: 32px 20px 20px 20px;
+    text-align: left;
+    flex: 0 0 80%;
+}
+
+.offeritem {
+    display: flex;
+    align-items: center;
+    box-shadow: 0  4px 6px #407BFF1F;
+    margin-bottom: 15px;
+    flex: 1 1 100vw;
+    border-radius: 10px;
+}
+
+.offerck, .offerdelegates {
+    display: flex;
+    margin: 20px 28px 60px 28px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* 
+---------------TABLET breakpoint 640px----------------
+*/
+@media screen and (min-width: 640px) {
+    .wrapper {
+        max-width: 768px;
+    }
+
+    /* Tlačítka */
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+            .buttons a{
+           margin: 10px;
+        }
+
+
+        /* Sekce offer ck & delegates */
+        .offerck {
+            display: flex;
+        }
+         .offeritem {
+             flex:1 1 calc(100% / 3 - 20px);
+             flex-direction: column;
+             margin: 0 10px;
+         }
+         .offertext {
+             text-align: center;
+             padding: 0 15px 20px 15px;
+         }
+          .offerimg {
+              margin: 40px auto 20px auto;
+          }
+        h2 {
+            margin-top: 80px;
+        }
+
+/* 
+---------------DESKTOP breakpoint 1100px----------------
+*/
+
+@media screen and (min-width: 1100px) {
+    .wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 60px;
+    }
+    /* Section "happytravels" */
+
+        .happytravels {
+            display: flex; 
+            justify-content: center;
+        }
+        
+        
+        .image {
+            width: 490px;
+            order: 1;
+            }
+
+
+        .happytraveller {
+            width: 425px;
+            margin: 0; 
+        }
+
+        .happytraveltext {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 490px;
+            margin-right: 60px;
+            order: 0;
+        }
+
+            .heading, .text {
+                flex: 1 0 100%;
+                text-align: left;
+                    }
+            .heading::after{
+                margin: auto;
+                bottom:-15px;
+                left: 0; 
+                right:inherit;
+            }
+            .heading {
+                margin-top: 130px;
+            }
+            .text {
+                margin: 40px 0;
+            }
+            .buttons a{
+                margin: 0;
+            }
+            .buttons .dobrodruzstvi {
+                margin-right: 20px;
+            }
+
+    /*  Sections "ck, delegatres" */    
+        .ck, .delegates {
+            display: flex;
+            margin-top: 80px;
+            align-items: center;
+        }
+
+        .offerck {
+            width: 550px;
+            order: 0;
+           
+        }
+        .textck {
+            order: 1;
+            width: 430px;
+            text-align: left;
+        }
+
+        .text {
+            margin-top: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: left;
+        }
+
+        .offerdelegates {
+            width: 550px;
+                      
+        }
+        .textdelegates {
+            width: 430px;
+            text-align: left;
+
+    
+}
+}
+}
