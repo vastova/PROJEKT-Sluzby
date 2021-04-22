@@ -184,6 +184,7 @@ h2 {
             max-width: 490px;
             margin-right: 60px;
             order: 0;
+            align-self: center;
         }
 
             .heading, .text {
@@ -196,9 +197,7 @@ h2 {
                 left: 0; 
                 right:inherit;
             }
-            .heading {
-                margin-top: 130px;
-            }
+    
             .text {
                 margin: 40px 0;
             }
